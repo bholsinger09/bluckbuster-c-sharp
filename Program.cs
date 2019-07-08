@@ -15,6 +15,35 @@ namespace myblockbuster
       blockBuster.AddMovie(hobbit);
       blockBuster.AddMovie(unexpected);
       #endregion
+
+      bool inStore = true;
+      string menu = "available";
+
+      while (inStore)
+      {
+
+        //which list of movie to print
+        switch (menu)
+        {
+          case "available":
+            blockBuster.PrintAvailableMovies();
+            break;
+
+          case "return":
+            blockBuster.PrintCheckedOutMovies();
+            break;
+
+        }
+
+
+      }
+
+
+
+
+
+
+
     }
   }
 }
