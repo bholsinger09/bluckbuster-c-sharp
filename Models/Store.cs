@@ -11,11 +11,11 @@ namespace myblockbuster.Models
     private List<Movie> AvailableMovies { get; set; }
     public List<Movie> CheckedOutMovies { get; set; }
 
-    public void AddMovie(Movie movieToAdd)
+    public void AddDvd(Movie movieToAdd)
     {
       AvailableMovies.Add(movieToAdd);
     }
-    public void RemoveMovie(Movie movieToRemove)
+    public void RemoveDvd(Movie movieToRemove)
     {
       AvailableMovies.Remove(movieToRemove);
     }
@@ -43,6 +43,12 @@ namespace myblockbuster.Models
       }
       System.Console.WriteLine("Please select a number to return or type 'available' to see the movies to rentout: ");
 
+    }
+
+    public void RentMovie(string selection)
+    {
+      Console.Clear();
+      Movie dvd = ValidateSelection(selection, AvailableDvds);
     }
 
 
